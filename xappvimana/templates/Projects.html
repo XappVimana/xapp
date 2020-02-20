@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <!--link rel="stylesheet" type="text/css" href="css/index.css"-->
+        <title>XApp</title>
+
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/css/w3.css">
+
+
+
+
+    </head>
+
+    <body>
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+ 
+            <form method="post" name="About"><button><a href="" class="w3-bar-item w3-button">About the app</a></button></form>
+            <form method="post" name="Name"><button><a href="" class="w3-bar-item w3-button">Tell us your name!</a></button></form>
+  
+</div>
+
+<!-- Page Content -->
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+
+  </div>
+</div>
+        <div>
+    <h1 class="headings">The Vimana's other projects </h1>
+</div>
+        <div>
+    <h3 class="headings"><b>Autonomous Farming System</b> </h3>
+</div>
+        
+     <div>
+
+In agriculture, transfer of technology and knowledge to farmers, consumers and policy-makers is vital for achieving sustainable food production. In advanced countries, farmers and consumers are well informed and remain connected. This is of critical importance to farmers in developing countries as well, therefore, The Vimana organisation is working on UAV(Unmanned Aerial Vehicle), UGV(Unmanned Ground Vehicle) model also working on GIS-mapping to cater to the needs of the farming community in India. 
+</div>
+        <hr>
+                <div>
+    <h3 class="headings"><b>Gesture Controlled VR Drone - </b>
+        A drone that could be controlled with just your hands and eyes? </h3>
+</div>
+        <img src="/static/img/drone.png" alt="Xapp" style="width:100%">
+     <div>
+
+Have you every wondered how it feels like to fly? Or at least look down when you fly? How would it be if you could control a drone with just your hand movements? Ever wondered how it would be to look around the drone just like you are seeing a 360-degree video? 
+We present an intelligent drone solution wherein we work on bringing these two features into one drone . 
+</div>
+        <hr>
+        <div>
+    <h3 class="headings"><b>High Altitude Balloons </b>
+         </h3>
+</div>
+        <img src="/static/img/hab.png" alt="Xapp" style="width:100%">
+     <div>
+
+Invented in the 19th century, scientific weather balloons have gone through very few innovations. We see a big potential for change and we're on our voyage to revolutionize it. We are currently working on using helium/hydrogen balloons to conduct Distinguished Experiments at high altitudes, low pressure and temperatures with longer flight time and endurance. We are building a reliable and stable payload to perform variety of experiments in near space environments.
+
+</div>
+
+    </body>
+     <script>
+    //window.open('http://shashankr.pythonanywhere.com/', '_blank', 'location=no,hidden=yes,toolbar=no');
+    function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+    }
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+    }
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Sidebar >
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
+
+<!-- Page Content >
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1>My Page</h1>
+  </div>
+</div>
+
+<img src="img_car.jpg" alt="Car" style="width:100%">
+
+<div class="w3-container">
+<p>This sidebar is hidden by default, (style="display:none")</p>
+<p>You must click on the "hamburger" icon (top left) to open it.</p>
+<p>The sidebar will hide a part of the page content.</p>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html-->
