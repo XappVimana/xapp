@@ -11,14 +11,22 @@ from flask_heroku import Heroku
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
-app.config.from_object('config')
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 #app.secret_key = 'dljsaklqk24e21cjn!Ew@@dsa5'
 
 
-from models import Name
+class Names(db.Model):
+
+    __tablename__ = "names"
+
+    #id = db.Column(db.Integer, primary_key=True)
+    id =  db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(4096))
+
+    def __init__(self, name):
+    	self.name = name
+
 
 
 @app.route('/', methods=['GET','POST'])
@@ -47,12 +55,16 @@ def name():
 		elif 'About' in request.form:
 			return redirect(url_for('about'))
 
-		names = request.form['name']
-		n = Name(name = names)
-		db.session.add(n)
-		db.session.commit()
-
-		
+		indata = Names(request.form)
+		data = copy(indata. __dict__ )
+		del data["_sa_instance_state"]
+		try:
+			db.session.add(indata)
+			db.session.commit()
+		except Exception as e:
+			print("\n FAILED entry: {}\n".format(json.dumps(data)))
+			print(e)
+			sys.stdout.flush()
 		'''
     	
 		

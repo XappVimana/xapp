@@ -1,0 +1,1 @@
+app.config['SQLALCHEMY_DATABASE_URI'] = postgres://hkauqacptxqdhu:dcd0e99b6bdbd9aa4a73f7503485afd55466b61840d1ba12026ea4108e867b6b@ec2-52-73-247-67.compute-1.amazonaws.com:5432/d6gqnfq6t8an07
